@@ -1,5 +1,5 @@
 #python3 setup.py install
-from setuptools import setup
+from setuptools import setup, find_packages
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 import os
 from distutils.sysconfig import get_config_vars
