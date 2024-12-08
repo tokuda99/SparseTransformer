@@ -11,6 +11,9 @@ os.environ['OPT'] = " ".join(
 
 setup(
     name='sptr',
+    version="1.0.0",
+    packages=find_packages(where="sptr"),
+    package_dir={"": "sptr"}, 
     ext_modules=[
         CUDAExtension('sptr_cuda', [
             'src/sptr/pointops_api.cpp',
@@ -24,5 +27,6 @@ setup(
         extra_compile_args={'cxx': ['-g', '-O3'], 'nvcc': ['-O3']}
         )
     ],
-    cmdclass={'build_ext': BuildExtension}
+    cmdclass={'build_ext': BuildExtension},
+    python_requires='>=3.8',
 )
