@@ -1,5 +1,7 @@
 # SpTr: PyTorch Spatially Sparse Transformer Library
 
+This repository is forked from [SparseTransformer](https://github.com/dvlab-research/SparseTransformer)
+
 This library provides a **fast** and **memory-efficient** implementation for sparse transformer with **varying token numbers** (e.g., window transformer for 3D point cloud).
 
 This library has been used by the following works:
@@ -35,10 +37,10 @@ indice_key = 'sptr_0'
 window_size = np.array([0.4, 0.4, 0.4])  # can also be integers for voxel-based methods
 shift_win = False  # whether to adopt shifted window
 self.attn = sptr.VarLengthMultiheadSA(
-    dim, 
-    num_heads, 
-    indice_key, 
-    window_size, 
+    dim,
+    num_heads,
+    indice_key,
+    window_size,
     shift_win
 )
 
@@ -57,7 +59,7 @@ Xin Lai (a Ph.D student at CSE CUHK) - Initial CUDA implementation, maintainance
 
 Fanbin Lu (a Ph.D student at CSE CUHK) - Improve CUDA implementation, maintainance.
 
-Yukang Chen (a Ph.D student at CSE CUHK) - Maintainance. 
+Yukang Chen (a Ph.D student at CSE CUHK) - Maintainance.
 
 
 ## Cite
@@ -84,4 +86,3 @@ If you find this project useful, please consider citing
 ## License
 
 This project is licensed under the Apache license 2.0 License.
-# SparseTransformer
